@@ -1,6 +1,13 @@
 .block-hero {
     background-size: cover;
     background-position: center;
+    position: relative;
+    z-index: 0;
+    &::before {
+        @include pseudo_cover();
+        background: linear-gradient( 90deg, #000000 7.37%, rgba(0, 0, 0, 0.0001) 47.82%);
+        z-index: -1;
+    }
 }
 
 .block__hero {
@@ -12,9 +19,10 @@
     h1 {
         color: $white;
         position: relative;
+        text-transform: uppercase;
         &::after {
             content: "";
-            width: 30%;
+            width: 20%;
             background: $white;
             height: 1px;
             display: inline-flex;

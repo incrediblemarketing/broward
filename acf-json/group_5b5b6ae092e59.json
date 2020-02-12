@@ -73,10 +73,7 @@
                         "id": ""
                     },
                     "choices": {
-                        "global": "Global",
-                        "5b6b1bef03436": "Gallery",
-                        "5b6b1beef2724": "Slider",
-                        "5b6b36aea1cec": "Intro"
+                        "global": "Global"
                     },
                     "default_value": [],
                     "allow_null": 0,
@@ -222,6 +219,31 @@
                 "class": "",
                 "id": ""
             }
+        },
+        {
+            "key": "field_5e44558c314b1",
+            "label": "Logo Select",
+            "name": "logo_select",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "small-circle": "Circle Logo with white background",
+                "large-circle": "Large Watermark"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -241,5 +263,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1533758655
+    "modified": 1581536749
 }

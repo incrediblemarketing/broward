@@ -9,7 +9,8 @@
             body: $("body").eq(0),
             jsToTop: $(".js-to-top"),
             jsScrollTo: $(".js-scroll-to"),
-            siteWrap: $(".site-wrap")
+            siteWrap: $(".site-wrap"),
+            siteNav: $(".site-nav")
         };
 
         var IM = {
