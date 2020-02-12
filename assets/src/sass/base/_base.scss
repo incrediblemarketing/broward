@@ -1,5 +1,10 @@
 html {
     background: white;
+    font-size: 18px;
+}
+
+body {
+    font-size: 1rem;
 }
 
 *:last-child {
@@ -40,4 +45,17 @@ a {
     background: $selection-highlight-background;
     color: $selection-highlight-color;
     text-shadow: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $primary-font;
+}
+
+h1 {
+    font-size: 5.333rem;
 }

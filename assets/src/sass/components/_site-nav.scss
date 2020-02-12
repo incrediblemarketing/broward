@@ -1,9 +1,25 @@
 .site-nav {
-	
-	.sub-menu {display:none;}
-
-	// offset if WP admin bar is present
-	.admin-bar & {top:46px;
-		@media (min-width: 783px) {top:32px;}
-	}
+    display: flex;
+    position: fixed;
+    height: 250px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    padding: 83px 110px;
+    z-index: 99;
+    .menu,
+    button {
+        display: none;
+    }
+    .sub-menu {
+        display: none;
+    }
+    // offset if WP admin bar is present
+    .admin-bar & {
+        top: 46px;
+        @media (min-width: 783px) {
+            top: 32px;
+        }
+    }
 }

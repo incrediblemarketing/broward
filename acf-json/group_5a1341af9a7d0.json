@@ -768,8 +768,8 @@
                 },
                 "5952ceb65c76b": {
                     "key": "5952ceb65c76b",
-                    "name": "faqs",
-                    "label": "FAQs",
+                    "name": "hero",
+                    "label": "Hero",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -811,7 +811,7 @@
                         },
                         {
                             "key": "field_5b63420e8e6dd",
-                            "label": "FAQs",
+                            "label": "Hero",
                             "name": "",
                             "type": "tab",
                             "instructions": "",
@@ -827,6 +827,88 @@
                         },
                         {
                             "key": "field_5952ceb65c76d",
+                            "label": "Content",
+                            "name": "content",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5e4348bec613a": {
+                    "key": "layout_5e4348bec613a",
+                    "name": "faqs",
+                    "label": "FAQs",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e4348bec613b",
+                            "label": "Block Options",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5e4348bec613c",
+                            "label": "Block Options",
+                            "name": "block_options",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b5b6ae092e59"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_5e4348bec613d",
+                            "label": "FAQs",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5e4348bec613e",
                             "label": "FAQs",
                             "name": "faqs",
                             "type": "repeater",
@@ -845,7 +927,7 @@
                             "button_label": "Add FAQ",
                             "sub_fields": [
                                 {
-                                    "key": "field_5952cfc85c778",
+                                    "key": "field_5e4348bec613f",
                                     "label": "Question",
                                     "name": "question",
                                     "type": "text",
@@ -864,7 +946,7 @@
                                     "maxlength": ""
                                 },
                                 {
-                                    "key": "field_5952cfdb5c779",
+                                    "key": "field_5e4348bec6140",
                                     "label": "Answer",
                                     "name": "answer",
                                     "type": "wysiwyg",
@@ -883,7 +965,7 @@
                                     "delay": 0
                                 },
                                 {
-                                    "key": "field_5b57898709441",
+                                    "key": "field_5e4348bec6141",
                                     "label": "Id",
                                     "name": "id",
                                     "type": "unique_id",
@@ -899,7 +981,7 @@
                             ]
                         },
                         {
-                            "key": "field_5b57897d09440",
+                            "key": "field_5e4348bec6142",
                             "label": "Id",
                             "name": "id",
                             "type": "unique_id",
@@ -1055,5 +1137,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1546482385
+    "modified": 1581467874
 }
