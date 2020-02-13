@@ -10,9 +10,12 @@
 }
 
 footer {
-    padding: 200px 0 65px;
+    padding: 100px 15px 65px;
     position: relative;
     z-index: 0;
+    @include mq(md) {
+        padding: 200px 0 65px;
+    }
     &::before {
         @include pseudo_cover();
         background: rgba($secondary, 0.75);
@@ -24,18 +27,30 @@ footer {
         height: 100%;
     }
     .contact__holder--padding {
-        padding: 81px 180px;
+        padding: 81px 3vw;
+        @include mq(xxl) {
+            padding: 81px 180px;
+        }
+        @include mq($until: md) {
+            margin-top: 35px;
+        }
     }
     .inner__padding {
-        padding: 45px 50px;
+        padding: 45px 30px 45px 50px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         height: 100%;
         justify-content: space-between;
+        @include mq(lg) {
+            padding: 45px 50px;
+        }
         p {
-            font-size: 1.33rem;
+            font-size: 1.05rem;
             line-height: 1.5em;
+            @include mq(lg) {
+                font-size: 1.33rem;
+            }
             i {
                 margin-left: -30px;
                 margin-right: 9px;
@@ -69,6 +84,9 @@ footer {
                 }
             }
         }
+    }
+    .btn-primary {
+        max-width: 100%;
     }
 }
 

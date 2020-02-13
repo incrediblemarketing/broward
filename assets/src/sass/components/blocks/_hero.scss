@@ -1,8 +1,12 @@
 .block-hero {
     background-size: cover;
-    background-position: center;
+    background-position: 68%;
     position: relative;
     z-index: 0;
+    margin: 0;
+    @include mq(xl) {
+        background-position: center;
+    }
     &::before {
         @include pseudo_cover();
         background: linear-gradient( 90deg, #000000 7.37%, rgba(0, 0, 0, 0.0001) 47.82%);
@@ -16,19 +20,35 @@
     width: 100%;
     position: relative;
     align-items: center;
+    margin: 0;
+    padding-top: 30vh;
+    @include mq(sm) {
+        padding-top: 20vh;
+    }
+    @include mq(md) {
+        padding-top: 10vh;
+    }
     h1 {
         color: $white;
         position: relative;
         text-transform: uppercase;
         &::after {
             content: "";
-            width: 20%;
+            width: 35%;
             background: $white;
             height: 1px;
             display: inline-flex;
-            margin-left: 45px;
+            margin-left: 25px;
             position: relative;
-            bottom: 25px;
+            bottom: 16px;
+            @include mq(xl) {
+                width: 25%;
+            }
+            @include mq(xxl) {
+                width: 20%;
+                bottom: 25px;
+                margin-left: 45px;
+            }
         }
     }
 }

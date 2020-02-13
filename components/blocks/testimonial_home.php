@@ -4,20 +4,20 @@
   $args = array(
     'post_type'   => 'testimonial',
     'posts_per_page'  => -1,
-    'post__not_in'     => array(171,170,166,160,161,159,158)
+    'post__not_in'     => array(171,170,167,166,160,161,159,158)
   );
   $testimonials = new WP_Query($args);
     ?>
 
 <div class="row testimonial--top ">
-  <div class="col-xl-3 offset-xl-1">
+  <div class="col-xxl-3 col-xl-5 offset-xl-1 col-md-6">
       <div class="fade-in-left">
         <?php echo $top_content; ?>
       </div>
   </div>
 </div>
 <div class="row testimonial--title justify-content-center">
-  <div class="col-10">
+  <div class="col-xl-10 col-12">
     <h2 class="line"><span>Testimonials</span></h2>
   </div>
 </div>

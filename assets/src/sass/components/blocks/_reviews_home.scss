@@ -1,13 +1,20 @@
 .block-reviews_home {
     text-align: center;
-    padding: 170px 0;
+    padding: 90px 0;
+    @include mq(lg) {
+        padding: 170px 0;
+    }
     h3 {
         font-family: $avenir;
         color: $secondary;
         font-weight: 500;
     }
     #stars {
-        margin-bottom: 59px;
+        margin-bottom: 30px;
+        max-width: 80%;
+        @include mq(lg) {
+            margin-bottom: 59px;
+        }
     }
     p {
         font-size: 1.777rem;

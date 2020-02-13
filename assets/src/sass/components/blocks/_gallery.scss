@@ -1,8 +1,22 @@
+.block-gallery {
+    background-position: center;
+    background-size: cover;
+}
+
 .block__gallery {
     display: flex;
     align-items: flex-end;
     padding-bottom: 236px;
     height: 100vh;
+    @include mq($until: xl) {
+        margin: 0;
+    }
+    @include mq(md, xl) {
+        max-height: 800px;
+    }
+    @include mq(xxl) {
+        height: 100vh;
+    }
     h2 {
         span {
             -webkit-text-stroke: 1px $black;

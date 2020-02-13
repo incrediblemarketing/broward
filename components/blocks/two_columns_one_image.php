@@ -5,14 +5,14 @@
 ?>
 
 <div class="row section__padding justify-content-center">
-  <div class="col-xl-5">
+  <div class="col-lg-6 col-xl-5">
     <div class="image__holder">
       <?php if($image) : ?>
         <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
       <?php endif; ?>
     </div>
   </div>
-  <div class="col-xl-5">
+  <div class="col-lg-6 col-xl-5">
     <div class="content__holder">
       <?php echo $column2; ?>
     </div>

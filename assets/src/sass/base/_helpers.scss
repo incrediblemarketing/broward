@@ -135,11 +135,22 @@ Padding
 */
 
 .section__padding {
-    padding: 200px 0;
+    padding: 90px 15px;
+    @include mq(sm) {
+        padding: 120px 15px;
+    }
+    @include mq(xxl) {
+        padding: 200px 0;
+    }
 }
 
 .section__padding--top {
-    padding-top: 200px;
+    @include mq(lg) {
+        padding-top: 50px;
+    }
+    @include mq(xl) {
+        padding-top: 100px;
+    }
 }
 
 

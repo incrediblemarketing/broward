@@ -9,7 +9,7 @@
 ?>
 
     <footer class="footer row justify-content-center " data-bg-image="<?php echo $footerbg; ?>">
-        <div class="col-xl-3">
+        <div class="col-xl-3 col-lg-4 col-md-5">
             <div class="contact__holder contact__spacer">
                 <div class="inner__padding">
                     <?php if ($addressLink && $address && $address2) : ?>
@@ -29,7 +29,7 @@
                 <?php get_template_part('components/social-icons'); ?>
             </div>
         </div>
-        <div class="col-xl-7">
+        <div class="col-xl-7 col-lg-6 col-md-6">
             <div class="contact__holder contact__holder--padding">
                 <?php echo do_shortcode('[gravityforms id="1" title="false" description="false" ajax="true"]'); ?>
             </div>

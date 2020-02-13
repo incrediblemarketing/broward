@@ -1,8 +1,8 @@
 .block-two_columns_one_image {
     position: relative;
     .logo__holder {
-        height: 500px;
-        width: 500px;
+        height: 26vw;
+        width: 26vw;
         background: $white;
         border-radius: 100em;
         position: absolute;
@@ -12,7 +12,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 41px;
+        padding: 2vw;
     }
     .logo__small-circle {
         width: 100%;
@@ -21,15 +21,28 @@
     .content__holder {
         border-radius: 50px 0;
         background: $secondary;
-        padding: 158px 103px;
+        padding: 50px 25px;
         color: $white;
         height: 100%;
+        @include mq(md) {
+            padding: 50px 35px;
+        }
+        @include mq(xl) {
+            padding: 14vh 5.2vw;
+        }
         h2 {
             color: $primary;
-            margin-bottom: 45px;
+            margin-bottom: 35px;
+            @include mq(xxl) {
+                margin-bottom: 45px;
+            }
         }
     }
     .image__holder {
+        margin-bottom: 45px;
+        @include mq(lg) {
+            margin-bottom: 0;
+        }
         img {
             width: 100%;
             height: auto;
