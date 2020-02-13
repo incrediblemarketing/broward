@@ -231,12 +231,12 @@
                     }
                 },
                 swiperSetup: function() {
-                    var gallery_block = new Swiper(".swiper__gallery", {
-                        slidesPerView: 1,
+                    var testimonial_home = new Swiper(".swiper--testimonials", {
+                        slidesPerView: "auto",
+                        centeredSlides: true,
                         loop: true,
-                        navigation: {
-                            nextEl: ".swiper-button-next",
-                            prevEl: ".swiper-button-prev"
+                        pagination: {
+                            el: ".swiper-pagination"
                         }
                     });
                 }

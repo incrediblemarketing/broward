@@ -238,7 +238,7 @@
                 "large-circle": "Large Watermark"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -263,5 +263,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1581536749
+    "modified": 1581549626
 }

@@ -341,6 +341,30 @@
             "maxlength": ""
         },
         {
+            "key": "field_5e45b5813088e",
+            "label": "Footer Background Image",
+            "name": "footer_background_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_593789f4da250",
             "label": "Social Icons",
             "name": "",
@@ -430,6 +454,54 @@
                     "maxlength": ""
                 }
             ]
+        },
+        {
+            "key": "field_5e45b430a617f",
+            "label": "Google Review",
+            "name": "google_review_",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5e45b450a6183",
+            "label": "Facebook Review",
+            "name": "facebook_review",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5e45b44ea6182",
+            "label": "Real Patient Ratings",
+            "name": "real_patient_ratings",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
         },
         {
             "key": "field_59389356c8d9d",
@@ -557,5 +629,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1581467613
+    "modified": 1581626790
 }

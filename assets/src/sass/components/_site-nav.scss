@@ -18,12 +18,19 @@
     }
     .btn {
         align-self: center;
+        i {
+            display: block;
+            @include mq(md) {
+                display: none;
+            }
+        }
     }
     .social-icons {
         margin-left: auto;
         margin-right: 3.5vw;
         align-self: center;
         li {
+            margin-left: 3vw;
             a {
                 font-size: 21px;
                 color: $white;
@@ -48,7 +55,7 @@
         }
     }
     &.sticky {
-        background: rgba($black, 0.9);
+        background: rgba($secondary, 0.8);
         padding: 12px 25px;
         box-shadow: rgba($white, 0.1) 0 0 4px;
         height: 100px;

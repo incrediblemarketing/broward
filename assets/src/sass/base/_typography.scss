@@ -1,3 +1,15 @@
 @import url("https://use.typekit.net/nnb6pbo.css");
+@font-face {
+    font-family: Avenir;
+    src: url("/wp-content/themes/incredibletheme/assets/src/font/AvenirLTStd-Black.otf");
+    font-weight: black;
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url("/wp-content/themes/incredibletheme/assets/src/font/AvenirLTStd-Roman.otf");
+}
+
 $primary-font: poynter-oldstyle-display;
 $fontawesome: "Font Awesome 5 Pro";
+$avenir: Avenir;

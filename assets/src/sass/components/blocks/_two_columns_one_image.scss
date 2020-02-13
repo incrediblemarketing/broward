@@ -1,0 +1,38 @@
+.block-two_columns_one_image {
+    position: relative;
+    .logo__holder {
+        height: 500px;
+        width: 500px;
+        background: $white;
+        border-radius: 100em;
+        position: absolute;
+        top: 0;
+        left: 8.3333%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 41px;
+    }
+    .logo__small-circle {
+        width: 100%;
+        height: auto;
+    }
+    .content__holder {
+        border-radius: 50px 0;
+        background: $secondary;
+        padding: 158px 103px;
+        color: $white;
+        height: 100%;
+        h2 {
+            color: $primary;
+            margin-bottom: 45px;
+        }
+    }
+    .image__holder {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

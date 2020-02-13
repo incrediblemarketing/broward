@@ -119,6 +119,34 @@ $size in $grid-breakpoints {
     opacity: 0;
 }
 
+
+/* 
+Image Handling
+*/
+
+.image__holder {
+    border-radius: 50px 0px;
+    overflow: hidden;
+}
+
+
+/* 
+Padding
+*/
+
+.section__padding {
+    padding: 200px 0;
+}
+
+.section__padding--top {
+    padding-top: 200px;
+}
+
+
+/* 
+Keyframes
+*/
+
 @keyframes scrollDown {
     0% {
         transform: scaleY(0);

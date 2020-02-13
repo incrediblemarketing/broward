@@ -5,6 +5,8 @@ html {
 
 body {
     font-size: 1rem;
+    line-height: 1.38em;
+    font-family: $avenir;
 }
 
 *:last-child {
@@ -15,6 +17,10 @@ a {
     &:hover {
         text-decoration: none;
     }
+}
+
+p {
+    margin-bottom: 35px;
 }
 
 .site-wrap {
@@ -58,4 +64,38 @@ h6 {
 
 h1 {
     font-size: 5.333rem;
+    line-height: 1.19em;
+}
+
+h2 {
+    font-size: 5.333rem;
+    line-height: 1em;
+    span {
+        display: block;
+        font-family: $avenir;
+        text-transform: uppercase;
+        -webkit-text-stroke: 1px $white;
+        -webkit-text-fill-color: $secondary;
+        font-weight: black;
+        font-size: 4rem;
+        line-height: 1em;
+    }
+}
+
+h3 {
+    font-size: 3.11rem;
+    line-height: 1.1em;
+    position: relative;
+    margin-bottom: 35px;
+    &.dot {
+        &::before {
+            content: "";
+            height: 12px;
+            width: 12px;
+            background: $primary;
+            position: absolute;
+            top: 15px;
+            left: -28px;
+        }
+    }
 }
