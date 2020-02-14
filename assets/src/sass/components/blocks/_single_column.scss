@@ -1,0 +1,20 @@
+.block-single_column {
+    .image__holder {
+        &.alignright {
+            max-width: 50%;
+            height: auto;
+        }
+    }
+    h2 {
+        font-size: 2rem;
+        color: $secondary;
+        font-weight: 600;
+        margin-bottom: 25px;
+    }
+    h3 {
+        font-size: 1.5rem;
+        color: $secondary;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+}

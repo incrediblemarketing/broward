@@ -22,7 +22,7 @@
                     this.scrollTo();
                     this.dataCss();
                     this.scrollMagic();
-                    this.mobileMenu();
+                    //this.mobileMenu();
                     this.siteNavSticky();
                     this.galleryBuilder();
                     this.swiperSetup();

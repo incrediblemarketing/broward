@@ -37,18 +37,44 @@
             width: 35%;
             background: $white;
             height: 1px;
-            display: inline-flex;
+            display: inline-block;
             margin-left: 25px;
             position: relative;
-            bottom: 16px;
+            margin: 16px 0 15px 25px;
             @include mq(xl) {
                 width: 25%;
             }
             @include mq(xxl) {
                 width: 20%;
-                bottom: 25px;
-                margin-left: 45px;
+                margin: 26px 0 25px 45px;
             }
         }
+    }
+}
+
+.page-header {
+    position: relative;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    z-index: 0;
+    padding-top: 100px;
+    @include mq(md) {
+        height: 350px;
+    }
+    @include mq(xl) {
+        height: 450px;
+    }
+    &::before {
+        @include pseudo_cover();
+        background: linear-gradient( rgba($secondary, 0.9), rgba($secondary, 0.3));
+        z-index: -1;
+    }
+    h1 {
+        color: $white;
+        text-align: center;
+        padding: 0 30px;
     }
 }

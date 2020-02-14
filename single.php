@@ -1,27 +1,18 @@
-<?php get_header(); ?>
+<?php
+    get_header();
+?>
 
-<div class="row justify-content-center">
-	<div class="col-12 col-lg-7">
-		<?php if (have_posts()) : ?>
-
-			<?php while (have_posts()) : the_post(); ?>
-
-				<?php get_template_part('components/post'); ?>
-
-			<?php endwhile; ?> 
-
-			<?php get_template_part('components/navigation-single'); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part('components/post-not-found'); ?>
-
-		<?php endif; ?>
-
-	</div>
-	<div class="col-lg-3">
-		<?php get_sidebar('blog'); ?>
-	</div>
+<div class="row blog__article section__padding justify-content-center">
+  <div class="col-xl-8 col-lg-10 col-12">
+        <?php if (have_posts()) : ?>
+            <?php while (have_posts()) : the_post(); ?>
+                <div class="image__holder aligncenter">
+                <?php echo get_the_post_thumbnail($post->ID, 'post_large'); ?>
+                </div>
+                <?php the_content(); ?>
+            <?php endwhile; ?>
+        <?php endif; ?>
+  </div>
 </div>
 
 <?php get_footer(); ?>
