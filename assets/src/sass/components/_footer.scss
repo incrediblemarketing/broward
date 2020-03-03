@@ -36,14 +36,14 @@ footer {
         }
     }
     .inner__padding {
-        padding: 45px 30px 45px 50px;
+        padding: 25px 30px 25px 50px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         height: 100%;
         justify-content: space-between;
         @include mq(lg) {
-            padding: 45px 50px;
+            padding: 25px 50px;
         }
         p {
             font-size: 1.05rem;

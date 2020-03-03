@@ -7,11 +7,12 @@
     left: 0;
     justify-content: space-between;
     padding: 15px 25px;
+    align-items: center;
     z-index: 99;
     transition: all 0.6s ease-in-out;
     @include mq(md) {
         padding: 35px 3.5vw;
-        height: 194px;
+        height: auto;
     }
     @include mq(xxl) {
         height: 250px;
@@ -33,19 +34,21 @@
     .btn {
         transition: all 0.6s ease-in-out;
         align-self: center;
-        @include mq($until: md) {
+        @include mq($until: lg) {
             min-width: unset;
             padding: 10px;
+            margin-left: auto;
         }
+
         i {
-            display: block;
+            display: inline-block;
             margin: 0;
             @include mq(md) {
                 display: none;
             }
         }
         &::before {
-            @include mq($until: md) {
+            @include mq($until: lg) {
                 display: none;
             }
         }
@@ -55,13 +58,21 @@
                 display: inline-block;
             }
         }
+        &:last-of-type() {
+            margin-left: 25px;
+            @include mq($until: lg) {
+                margin-left: 20px;
+                height: 40px;
+                line-height: 1em;
+            }
+        }
     }
     .social-icons {
         transition: all 0.6s ease-in-out;
         margin-left: auto;
         margin-right: 3.5vw;
         align-self: center;
-        @include mq($until: md) {
+        @include mq($until: xl) {
             display: none !important;
         }
         li {
