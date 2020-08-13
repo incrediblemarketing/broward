@@ -6,11 +6,11 @@
     left: -100%;
     opacity: 0;
     padding: 60px 15px;
-    background-attachment: unset;
+    background: $secondary;
     @include mq(md) {
         padding: 60px 45px;
     }
-    .logo-freeman {
+    .desktop-logo {
         width: 240px;
         height: auto;
         margin: 0 auto 15px;
@@ -44,7 +44,7 @@
             width: 35px;
             margin: 0;
             display: block;
-            background: $black;
+            background: $white;
             transform: rotate(45deg);
             position: absolute;
             top: 11px;
@@ -57,12 +57,12 @@
         padding: 0;
         margin: 45px 0;
         list-style: none;
-        max-height: 70%;
-        height: 70%;
+        max-height: 50%;
+        height: 50%;
         overflow: auto;
         text-align: center;
         @media screen and (max-height: 600px) {
-            max-height: 49%;
+            max-height: 35%;
         }
         @include mq($until: md) {
             margin-top: 15px;
@@ -75,18 +75,19 @@
             position: relative;
             left: -100%;
             @include mq(md) {
-                font-size: 35px;
+                font-size: 27px;
             }
             i {
                 margin-left: 20px;
                 position: absolute;
                 top: 11px;
+                color: $white;
                 @include mq(md) {
-                    top: 19px;
+                    top: 13px;
                 }
             }
             a {
-                color: $black;
+                color: $white;
                 text-decoration: none !important;
                 &:hover {
                     color: $primary;
@@ -96,13 +97,14 @@
                 display: none;
                 &.active {
                     display: block;
+                    padding: 0;
                 }
                 li {
                     left: 0;
                     font-size: 1rem;
                     font-weight: 300;
                     @include mq(md) {
-                        font-size: 26px;
+                        font-size: 18px;
                     }
                     i {
                         top: 7px;
@@ -111,7 +113,7 @@
                         }
                     }
                     a {
-                        color: $black;
+                        color: $white;
                         &:hover {
                             color: $primary;
                         }
@@ -130,7 +132,7 @@
         }
     }
     hr {
-        background: $black;
+        background: $primary;
         max-width: 100%;
         margin-bottom: 25px;
     }
@@ -139,7 +141,7 @@
         li {
             margin: 5px 15px;
             a {
-                color: $black;
+                color: $primary;
                 font-size: 22px;
                 &:hover {
                     color: $primary;

@@ -36,6 +36,25 @@
             @include mq(xxl) {
                 margin-bottom: 45px;
             }
+
+            strong {
+                font-family: $avenir;
+                font-weight: 900;
+                line-height: 1em;
+                text-transform: uppercase;
+                -webkit-text-stroke: 1px #fff;
+                -webkit-text-fill-color: transparent;
+                font-size: 1em;
+                display: block;
+
+                @include mq(md) {
+                    font-size: 1.2em;
+                }
+
+                @include mq(xxl) {
+                    font-size: 4rem;
+                }
+            }
         }
     }
     .image__holder {

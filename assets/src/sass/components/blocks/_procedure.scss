@@ -1,0 +1,109 @@
+.block-procedure {
+    position: relative;
+    padding: 90px 15px;
+
+    @include mq(md) {
+        padding: 90px 15px;
+    }
+    @include mq(xxl) {
+        padding: 200px 0;
+    }
+
+    h2 {
+        font-family: $avenir;
+        font-weight: 900;
+        font-size: 1.8rem;
+        line-height: 1em;
+        text-transform: uppercase;
+        -webkit-text-stroke: 1px #000;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 35px;
+
+        @include mq(lg) {
+            margin-bottom: 85px;
+            font-size: 3rem;
+        }
+        @include mq(xxl) {
+            font-size: 4rem;
+        }
+
+        strong {
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 100%;
+                background: $secondary;
+                height: 1px;
+                margin-left: 25px;
+            }
+        }
+    }
+
+    .watermark {
+        position: absolute;
+        right: 0;
+        top: -252px;
+        max-width: 90%;
+        height: auto;
+    }
+
+    .image__holder {
+        position: relative;
+        background: $white;
+        border-radius: 50px 0px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    ul {
+        padding: 0 0 0 30px;
+        margin: 30px 0 0;
+
+        @include mq(md) {
+            margin: 0;
+            padding: 0 0 0 8.5vw;
+        }
+
+        li {
+            margin-bottom: 15px;
+
+            @include mq(xxl) {
+                margin-bottom: 60px;
+            }
+
+            a {
+                color: $dark_gray;
+                font-family: $avenir;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 1rem;
+                line-height: 1.33em;
+
+                @include mq(md) {
+                    font-size: 1.33rem;
+                }
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+    .flex-row-reverse {
+        ul {
+            padding: 0 0 0 30px;
+        }
+
+        .image__holder {
+            border-radius: 0 50px;
+        }
+    }
+}

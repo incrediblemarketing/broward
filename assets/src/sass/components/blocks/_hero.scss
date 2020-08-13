@@ -9,7 +9,11 @@
     }
     &::before {
         @include pseudo_cover();
-        background: linear-gradient( 90deg, #000000 7.37%, rgba(0, 0, 0, 0.0001) 47.82%);
+        background: linear-gradient(
+            90deg,
+            #000000 7.37%,
+            rgba(0, 0, 0, 0.0001) 47.82%
+        );
         z-index: -1;
     }
 }
@@ -32,49 +36,93 @@
         color: $white;
         position: relative;
         text-transform: uppercase;
+        display: flex;
+        align-items: center;
         &::after {
             content: "";
-            width: 35%;
+            width: 100%;
             background: $white;
             height: 1px;
             display: inline-block;
             margin-left: 25px;
             position: relative;
             margin: 16px 0 15px 25px;
-            @include mq(xl) {
-                width: 25%;
-            }
-            @include mq(xxl) {
-                width: 20%;
-                margin: 26px 0 25px 45px;
+        }
+
+        a {
+            color: $white;
+
+            &:hover {
+                color: $primary;
             }
         }
     }
-}
 
-.page-header {
-    position: relative;
-    height: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    z-index: 0;
-    padding-top: 100px;
-    @include mq(md) {
-        height: 350px;
+    h2 {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.5rem;
+        line-height: 1.15em;
+        text-transform: uppercase;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+
+        @include mq($until: md) {
+            margin: 20px 0;
+        }
+
+        @include mq(md) {
+            font-size: 2.8rem;
+        }
+        @include mq(lg) {
+            font-size: 3.8rem;
+        }
+
+        @include mq(xxl) {
+            font-size: 6.8rem;
+        }
+        &::before {
+            content: "";
+            width: 100%;
+            background: $primary;
+            height: 1px;
+            display: block;
+            margin-right: 25px;
+            position: relative;
+            margin: 16px 25px 15px 0;
+        }
+        a {
+            color: $primary;
+
+            &:hover {
+                color: $white;
+            }
+        }
     }
-    @include mq(xl) {
-        height: 450px;
-    }
-    &::before {
-        @include pseudo_cover();
-        background: linear-gradient( rgba($secondary, 0.9), rgba($secondary, 0.3));
-        z-index: -1;
-    }
-    h1 {
-        color: $white;
+
+    h3 {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.5rem;
+        line-height: 1.2em;
+        text-transform: uppercase;
         text-align: center;
-        padding: 0 30px;
+
+        @include mq(md) {
+            font-size: 2.8rem;
+        }
+        @include mq(lg) {
+            font-size: 3.4rem;
+        }
+        @include mq(xxl) {
+            font-size: 5.4rem;
+        }
+
+        a {
+            &:hover {
+                color: $white;
+            }
+        }
     }
 }

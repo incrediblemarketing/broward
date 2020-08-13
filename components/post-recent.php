@@ -7,10 +7,10 @@
 	<?php endif; ?>
 	<div class="content--area">
 		<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf('Permanent Link to %s', the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h2>
-
-		<?php get_template_part('components/post-meta'); ?>
 		
-		<?php the_excerpt(); ?>
+		<?php $my_content = apply_filters( 'the_content', get_the_content() );
+		$my_content = wp_strip_all_tags($my_content);
+		echo wp_trim_words( $my_content, 25, $moreLink); ?>
 
 		<a class="read-more" href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf('Permanent Link to %s', the_title_attribute('echo=0')); ?>">Read More</a>
 	</div>

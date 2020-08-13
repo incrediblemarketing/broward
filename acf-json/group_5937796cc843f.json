@@ -55,7 +55,55 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "url",
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5f337ab88d251",
+            "label": "Gallery Header Image",
+            "name": "gallery_header_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5f337ac98d252",
+            "label": "Blog Header Image",
+            "name": "blog_header_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
             "preview_size": "thumbnail",
             "library": "all",
             "min_width": "",
@@ -458,7 +506,7 @@
         {
             "key": "field_5e45b430a617f",
             "label": "Google Review",
-            "name": "google_review_",
+            "name": "google_review",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -475,22 +523,6 @@
             "key": "field_5e45b450a6183",
             "label": "Facebook Review",
             "name": "facebook_review",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_5e45b44ea6182",
-            "label": "Real Patient Ratings",
-            "name": "real_patient_ratings",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -610,6 +642,44 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_5e5eb30a611d2",
+            "label": "Business Phone Display ENT",
+            "name": "business_phone_display_ent",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "(999) 999-9999",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e5eb315611d3",
+            "label": "Business Phone URL ENT",
+            "name": "business_phone_url_ent",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "+1-999-999-9999",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -629,5 +699,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1581626790
+    "modified": 1597209303
 }

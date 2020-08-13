@@ -10,7 +10,7 @@
 	$footerbg     = get_field( 'footer_background_image', 'option' );
 ?>
 
-	<footer class="footer row justify-content-center " data-bg-image="<?php echo $footerbg; ?>">
+	<footer id="footer" class="footer row justify-content-center " data-bg-image="<?php echo $footerbg; ?>">
 		<div class="col-xl-3 col-lg-4 col-md-5">
 			<div class="contact__holder contact__spacer">
 				<div class="inner__padding">

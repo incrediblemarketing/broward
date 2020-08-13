@@ -6,12 +6,12 @@
     top: 0;
     left: 0;
     justify-content: space-between;
-    padding: 15px 25px;
+    padding: 15px 15px;
     align-items: center;
     z-index: 99;
     transition: all 0.6s ease-in-out;
     @include mq(md) {
-        padding: 35px 3.5vw;
+        padding: 35px 15px;
         height: auto;
     }
     @include mq(xxl) {
@@ -24,9 +24,12 @@
             width: auto;
             transition: all 0.6s ease-in-out;
             @include mq(md) {
-                height: 100px;
+                height: 70px;
             }
             @include mq(lg) {
+                height: 90px;
+            }
+            @include mq(xxl) {
                 height: 125px;
             }
         }
@@ -34,10 +37,19 @@
     .btn {
         transition: all 0.6s ease-in-out;
         align-self: center;
-        @include mq($until: lg) {
+        min-width: 180px;
+        @include mq($until: md) {
             min-width: unset;
             padding: 10px;
             margin-left: auto;
+            line-height: 15px;
+        }
+        @include mq($until: md) {
+            line-height: 1em;
+        }
+
+        @include mq(xl) {
+            min-width: 225px;
         }
 
         i {
@@ -59,11 +71,9 @@
             }
         }
         &:last-of-type() {
-            margin-left: 25px;
-            @include mq($until: lg) {
-                margin-left: 20px;
-                height: 40px;
-                line-height: 1em;
+            margin-left: 15px;
+            @include mq($until: md) {
+                display: none;
             }
         }
     }
@@ -86,9 +96,141 @@
             }
         }
     }
-    .menu,
+
+    .right--nav {
+        margin-left: auto;
+
+        @include mq(xl) {
+            margin-left: unset;
+            width: 100%;
+            padding-left: 10px;
+        }
+
+        @include mq(xxl) {
+            padding-left: 50px;
+        }
+
+        .right--nav-top {
+            display: flex;
+            justify-content: flex-end;
+
+            @include mq(xl) {
+                padding-bottom: 40px;
+            }
+        }
+        .right--nav-bottom {
+            border-top: 1px solid $white;
+
+            @include mq($until: xl) {
+                display: none;
+            }
+
+            .menu {
+                display: flex;
+                justify-content: space-between;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+
+                > li {
+                    position: relative;
+                    a {
+                        font-family: $avenir;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 18px;
+                        letter-spacing: 0;
+                        text-transform: uppercase;
+                        color: $white;
+                        display: block;
+                        padding: 25px 8px 15px;
+
+                        @include mq(xxl) {
+                            line-height: 22px;
+                            font-size: 16px;
+                            letter-spacing: 2px;
+                            padding: 40px 10px 20px;
+                        }
+
+                        @media screen and (max-height: 700px) {
+                            line-height: 1.1em;
+                        }
+                    }
+
+                    &:hover {
+                        > .sub-menu {
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            display: block;
+                            width: 250px;
+                            background: $secondary;
+                            list-style: none;
+                            margin: 0;
+                            padding: 0;
+
+                            li {
+                                a {
+                                    display: block;
+                                    color: $white;
+                                    padding: 8px 15px;
+
+                                    @include mq(xxl) {
+                                        padding: 11px 20px;
+                                    }
+
+                                    &:hover {
+                                        background: $primary;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     button {
-        display: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $white;
+        height: 40px;
+        width: 45px;
+        background: none;
+        padding: 0;
+        margin-left: 15px;
+        flex-direction: column;
+        transition: all 0.4s ease-in-out;
+
+        @include mq(md) {
+            height: 45px;
+            width: 45px;
+        }
+
+        @include mq(lg) {
+            margin-left: 15px;
+            height: 45px;
+            width: 50px;
+        }
+
+        &:focus {
+            border: 3px solid $white;
+            outline: none;
+        }
+
+        span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: $white;
+            margin: 4px 0;
+        }
+        @include mq(xl) {
+            display: none;
+        }
     }
     .sub-menu {
         display: none;
@@ -101,16 +243,76 @@
         }
     }
     &.sticky {
-        background: rgba($secondary, 0.8);
-        padding: 12px 25px;
+        background: rgba($secondary, 0.95);
+        padding: 12px 15px;
         box-shadow: rgba($white, 0.1) 0 0 4px;
         height: 100px;
+
+        @include mq(xxl) {
+            padding: 12px 25px;
+        }
         .logo {
             .desktop-logo {
                 height: 70px;
                 @include mq(md) {
                     height: 75px;
                 }
+            }
+        }
+
+        .right--nav {
+            display: flex;
+            flex-direction: row-reverse;
+            padding: 0;
+        }
+
+        .right--nav-bottom {
+            border: 0;
+            padding: 0;
+            margin: 0 auto;
+
+            .menu {
+                margin: 0 auto;
+                > li {
+                    a {
+                        padding: 43px 4px;
+                        font-size: 13px;
+
+                        @include mq(xxl) {
+                            font-size: 16px;
+                            padding: 39px 7px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .right--nav-top {
+            padding: 0 !important;
+        }
+
+        .social-icons,
+        .btn:last-of-type {
+            display: none !important;
+        }
+
+        .btn-primary {
+            padding: 10px;
+            min-width: unset;
+
+            @include mq(lg) {
+                min-width: 150px;
+            }
+
+            &::before {
+                @include mq($until: xxl) {
+                    display: none;
+                }
+            }
+
+            @include mq(xxl) {
+                padding: 12px 50px 12px 35px;
+                min-width: 225px;
             }
         }
     }

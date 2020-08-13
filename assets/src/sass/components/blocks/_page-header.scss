@@ -1,0 +1,72 @@
+.page-header {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    z-index: 0;
+    padding-top: 100px;
+    background: $secondary;
+    padding-bottom: 53px;
+
+    @include mq(xl) {
+        height: 600px;
+    }
+    &::before {
+        @include pseudo_cover();
+        background: linear-gradient(
+            90deg,
+            #3e4b77 7.37%,
+            rgba(62, 75, 119, 0.0001) 47.82%
+        );
+        z-index: -1;
+    }
+    h1 {
+        color: $primary;
+        position: relative;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.7rem;
+        line-height: 1em;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+
+        @include mq(md) {
+            white-space: nowrap;
+        }
+        @include mq(lg) {
+            font-size: 3rem;
+        }
+        @include mq(xxl) {
+            font-size: 4rem;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 40%;
+            background: $primary;
+            margin-left: 10px;
+
+            @include mq(md) {
+                margin-left: 26px;
+                width: 100%;
+            }
+        }
+    }
+
+    .image__holder {
+        @include absolute_cover;
+        z-index: -2;
+        border-radius: 0;
+        opacity: 0.5;
+
+        img {
+            @include absolute_cover;
+            object-fit: cover;
+        }
+    }
+}

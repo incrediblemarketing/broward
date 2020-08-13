@@ -1,0 +1,60 @@
+.block-purple_column_with_large_image {
+    position: relative;
+
+    .image__holder {
+        border-radius: 0;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .purple--area {
+        background: $secondary;
+        color: $white;
+        padding: 50px 0;
+
+        @include mq(md) {
+            border-radius: 50px 0px;
+            padding: 30px;
+            transform: translateY(-35%);
+            margin-bottom: -10%;
+        }
+        @include mq(lg) {
+            margin-bottom: -10%;
+        }
+        @include mq(xl) {
+            padding: 50px 100px;
+            transform: translateY(-50%);
+            margin-bottom: -10%;
+        }
+
+        h2 {
+            color: $white;
+            @include mq(md) {
+                width: 50%;
+            }
+        }
+    }
+
+    .contact {
+        h2 {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.8rem;
+            line-height: 1em;
+            text-transform: uppercase;
+            color: $primary;
+            font-family: $primary-font;
+
+            @include mq(lg) {
+                font-size: 2.1rem;
+            }
+            @include mq(xxl) {
+                font-size: 3.1rem;
+            }
+        }
+    }
+}

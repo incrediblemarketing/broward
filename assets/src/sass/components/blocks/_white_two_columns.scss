@@ -1,0 +1,15 @@
+.block-white_two_columns {
+    position: relative;
+    padding: 90px 0;
+    background: #fafbff;
+
+    @include mq(lg) {
+        padding: 120px 0;
+    }
+
+    .left--column {
+        @include mq($until: lg) {
+            margin-bottom: 35px;
+        }
+    }
+}

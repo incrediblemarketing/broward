@@ -13,8 +13,7 @@
     order: 3;
 }
 
-@each $breakpoint,
-$size in $grid-breakpoints {
+@each $breakpoint, $size in $grid-breakpoints {
     @media (min-width: #{$size}) {
         .order-#{breakpoint}-1 {
             order: 1 !important;
@@ -27,7 +26,6 @@ $size in $grid-breakpoints {
         }
     }
 }
-
 
 /* Backgrounds
    ========================================================================== */
@@ -49,7 +47,6 @@ $size in $grid-breakpoints {
         transform: translate(-50%, -50%);
     }
 }
-
 
 /* Visibility
    ========================================================================== */
@@ -93,7 +90,6 @@ $size in $grid-breakpoints {
     @extend %visuallyhidden;
 }
 
-
 /* Animations */
 
 .fade-in-left {
@@ -119,7 +115,6 @@ $size in $grid-breakpoints {
     opacity: 0;
 }
 
-
 /* 
 Image Handling
 */
@@ -128,7 +123,6 @@ Image Handling
     border-radius: 50px 0px;
     overflow: hidden;
 }
-
 
 /* 
 Padding
@@ -153,16 +147,19 @@ Padding
     }
 }
 
-
 /* 
 Alignment
 */
 
 .alignright {
-    float: right;
-    margin: 0 0 45px 3vw;
-}
+    margin: 0 0 35px;
 
+    @include mq(md) {
+        float: right;
+        margin: 0 0 45px 3vw;
+        max-width: 50%;
+    }
+}
 
 /* 
 Keyframes

@@ -22,13 +22,16 @@
                     this.scrollTo();
                     this.dataCss();
                     this.scrollMagic();
-                    //this.mobileMenu();
+                    this.mobileMenu();
                     this.siteNavSticky();
                     this.galleryBuilder();
                     this.swiperSetup();
                 },
                 siteNavSticky: function() {
-                    $cache.window.scroll(function() {
+									if ($cache.window.scrollTop() > 0) {
+										$cache.siteNav.addClass("sticky");
+									}
+									$cache.window.scroll(function() {
                         if ($cache.window.scrollTop() > 0) {
                             $cache.siteNav.addClass("sticky");
                         } else {
@@ -42,9 +45,7 @@
                         e.preventDefault();
                     });
 
-                    $(
-                        ".menu__mobile .menu li.menu-item-has-children > a"
-                    ).after('<i class="fal fa-angle-down"></i>');
+                    $(".menu__mobile .menu li.menu-item-has-children > a").after('<i class="fal fa-angle-down"></i>');
 
                     $(".menu__mobile .menu li.menu-item-has-children i").on(
                         "click",
@@ -157,78 +158,9 @@
                     });
                 },
                 galleryBuilder: function() {
-                    loadmore();
-                    clickLoadmore();
-                    clickLightBox();
-                    $('select[data-toggle="categories"]').on(
-                        "change",
-                        function() {
-                            var $tax_id = $(this)
-                                .find(":selected")
-                                .data("setProcedure");
-                            console.log($tax_id);
-                            $("#grid__gallery").fadeOut("slow", function() {
-                                $.ajax({
-                                    url: im.ajax_url,
-                                    type: "get",
-                                    data: {
-                                        action: "get_gallery_info",
-                                        taxid: $tax_id
-                                    },
-                                    success: function(response) {
-                                        console.log(response);
-                                        $("#grid__gallery")
-                                            .empty()
-                                            .append(response)
-                                            .fadeIn("slow", function() {
-                                                loadmore();
-                                            });
-                                        clickLoadmore();
-                                        clickLightBox();
-                                    }
-                                });
-                            });
-                        }
-                    );
-
-                    function loadmore() {
-                        $('button[data-toggle="load-more"]').fadeIn();
-                        $(".gallery__item")
-                            .slice(10, 100)
-                            .hide();
-                        if ($(".gallery__item:hidden").length === 0) {
-                            $('button[data-toggle="load-more"]').fadeOut(
-                                "slow"
-                            );
-                        }
-                    }
-
-                    function clickLoadmore() {
-                        $('button[data-toggle="load-more"]').on(
-                            "click",
-                            function(e) {
-                                e.preventDefault();
-                                $(".gallery__item:hidden")
-                                    .slice(0, 10)
-                                    .slideDown();
-                                if ($(".gallery__item:hidden").length == 0) {
-                                    $(
-                                        'button[data-toggle="load-more"]'
-                                    ).fadeOut("slow");
-                                }
-                            }
-                        );
-                    }
-
-                    function clickLightBox() {
-                        $('[data-toggle="lightbox"').on("click", function() {
-                            $(this).addClass("hi");
-                            $(this)
-                                .closest(".gallery__item")
-                                .find(".lightbox--patient")
-                                .toggleClass("open-lightbox");
-                        });
-                    }
+									$('h5.toggle').on('click', function(){
+										$(this).parent().toggleClass('closed');
+									});
                 },
                 swiperSetup: function() {
                     var testimonial_home = new Swiper(".swiper--testimonials", {
