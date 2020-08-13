@@ -79,7 +79,7 @@
             font-size: 3.8rem;
         }
 
-        @include mq(xxl) {
+        @include mq(xxxl) {
             font-size: 6.8rem;
         }
         &::before {
@@ -115,7 +115,7 @@
         @include mq(lg) {
             font-size: 3.4rem;
         }
-        @include mq(xxl) {
+        @include mq(xxxl) {
             font-size: 5.4rem;
         }
 

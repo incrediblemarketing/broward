@@ -82,7 +82,7 @@ h2 {
     @include mq(md) {
         font-size: 3rem;
     }
-    @include mq(xxl) {
+    @include mq(xxxl) {
         font-size: 5.333rem;
     }
     span {
