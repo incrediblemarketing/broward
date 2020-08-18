@@ -17,7 +17,7 @@ if ( is_post_type_archive( 'gallery' ) || is_singular( 'gallery' ) || is_tax( 'b
 	$background_image = get_field( 'gallery_header_image', 'options' );
 endif;
 
-if ( is_home() || is_single() ) :
+if ( is_home() || is_singular( 'post' ) ) :
 	$background_image = get_field( 'blog_header_image', 'options' );
 endif;
 ?>
@@ -36,7 +36,7 @@ endif;
 				<h1>
 					<?php if ( is_home() ) : ?>
 						News & Updates
-					<?php elseif ( is_post_type_archive( 'gallery' ) || is_singular( 'gallery' ) || is_tax( 'beforeaftercategory' )) : ?>
+					<?php elseif ( is_post_type_archive( 'gallery' ) || is_singular( 'gallery' ) || is_tax( 'beforeaftercategory' ) ) : ?>
 						Before & After Gallery
 					<?php elseif ( is_category() ) : ?>
 						Category: <?php single_cat_title(); ?>

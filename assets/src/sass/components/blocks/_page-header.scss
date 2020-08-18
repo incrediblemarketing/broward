@@ -32,10 +32,6 @@
         text-transform: uppercase;
         display: flex;
         align-items: center;
-
-        @include mq(md) {
-            white-space: nowrap;
-        }
         @include mq(lg) {
             font-size: 3rem;
         }
@@ -45,15 +41,16 @@
 
         &::after {
             content: "";
-            display: block;
+            display: flex;
             height: 1px;
             width: 40%;
             background: $primary;
             margin-left: 10px;
+            flex-grow: 1;
 
             @include mq(md) {
                 margin-left: 26px;
-                width: 100%;
+                width: 35%;
             }
         }
     }
@@ -67,6 +64,7 @@
         img {
             @include absolute_cover;
             object-fit: cover;
+            object-position: top;
         }
     }
 }

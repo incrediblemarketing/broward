@@ -16,4 +16,24 @@
             margin-top: 100px;
         }
     }
+
+    h3 {
+        font-size: 1.5rem;
+        color: $secondary;
+        font-family: $avenir;
+        text-transform: capitalize;
+
+        @include mq(lg) {
+            font-size: 2rem;
+        }
+    }
+
+    ul {
+        padding-left: 25px;
+        margin-bottom: 35px;
+
+        li {
+            margin-bottom: 12px;
+        }
+    }
 }
