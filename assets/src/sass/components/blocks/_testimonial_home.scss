@@ -6,14 +6,19 @@
     background-size: cover;
     background-position: 68%;
     @include mq(md) {
-        background-position: center;
+        background-position: top;
+        background-attachment: fixed;
     }
     &::before {
         @include pseudo_cover;
         z-index: -1;
         background: rgba($secondary, 0.75);
         @include mq(md) {
-            background: linear-gradient( 270deg, rgba(62, 75, 119, 0.0001) 18.94%, #3e4b77 100%);
+            background: linear-gradient(
+                270deg,
+                rgba(62, 75, 119, 0.0001) 18.94%,
+                #3e4b77 100%
+            );
         }
     }
     h2 {

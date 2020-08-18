@@ -25,8 +25,27 @@
                     this.mobileMenu();
                     this.siteNavSticky();
                     this.galleryBuilder();
-                    this.swiperSetup();
-                },
+										this.swiperSetup();
+										this.openAnim();
+								},
+								openAnim: function(){
+									//Open page animations
+									var openTween = new TimelineMax();
+									openTween.to(".site-nav .logo img", 0.5, { opacity: 1, left: 0 });
+									openTween.to(".site-nav .btn-primary", 0.2, { opacity: 1 });
+									openTween.to(".site-nav .social-icons", 0.2, { opacity: 1 });
+									openTween.staggerTo(
+										".site-nav .menu > li",
+										0.2,
+										{
+											opacity: 1,
+											top: 0
+										},
+										0.1
+										);
+									openTween.to(".page-header h1", 0.3, { opacity: 1 });
+									
+									},
                 siteNavSticky: function() {
 									if ($cache.window.scrollTop() > 0) {
 										$cache.siteNav.addClass("sticky");

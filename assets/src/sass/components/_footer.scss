@@ -15,6 +15,7 @@ footer {
     z-index: 0;
     @include mq(md) {
         padding: 200px 0 65px;
+        background-attachment: fixed;
     }
     &::before {
         @include pseudo_cover();

@@ -23,6 +23,8 @@
             height: 70px;
             width: auto;
             transition: all 0.6s ease-in-out;
+            opacity: 0;
+            left: -200px;
             @include mq(md) {
                 height: 70px;
             }
@@ -37,6 +39,7 @@
     .btn {
         transition: all 0.6s ease-in-out;
         align-self: center;
+        opacity: 0;
         min-width: 180px;
         @include mq($until: md) {
             min-width: unset;
@@ -79,6 +82,7 @@
     }
     .social-icons {
         transition: all 0.6s ease-in-out;
+        opacity: 0;
         margin-left: auto;
         margin-right: 3.5vw;
         align-self: center;
@@ -134,6 +138,8 @@
 
                 > li {
                     position: relative;
+                    opacity: 0;
+                    top: 100px;
                     a {
                         font-family: $avenir;
                         font-style: normal;
