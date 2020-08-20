@@ -13,6 +13,12 @@
         align-items: center;
         justify-content: center;
         padding: 2vw;
+
+        @media screen and (max-height: 700px) {
+            height: 20vw;
+            width: 20vw;
+            padding: 1vw;
+        }
     }
     .logo__small-circle {
         width: 100%;

@@ -290,6 +290,10 @@
                         padding: 43px 4px;
                         font-size: 13px;
 
+                        @include mq(xl) {
+                            padding: 43px 10px;
+                        }
+
                         @include mq(xxl) {
                             font-size: 16px;
                             padding: 39px 7px;
