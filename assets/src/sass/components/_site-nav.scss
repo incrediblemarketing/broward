@@ -330,6 +330,12 @@
                 padding: 12px 50px 12px 35px;
                 min-width: 225px;
             }
+
+            span {
+                &:first-of-type {
+                    display: none;
+                }
+            }
         }
     }
 }

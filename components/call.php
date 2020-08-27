@@ -9,7 +9,7 @@
 
 <?php if ( $business_phone_display && $business_phone_url ) : ?>
 	<a class="btn btn-primary" href="tel:<?php echo $business_phone_url; ?>">
-		<i class="fa fa-phone"></i> <span><?php echo $business_phone_display; ?></span>
+		<i class="fa fa-phone"></i> <span>Aesthetics</span> <span><?php echo $business_phone_display; ?></span>
 	</a>
 <?php endif; ?>
 <?php if ( $business_phone_display_ent && $business_phone_url_ent ) : ?>
