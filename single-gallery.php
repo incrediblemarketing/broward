@@ -10,8 +10,8 @@ get_header();
 	<div class="container">
 		<div class="row">
 		  <div class="col-12">
-			<?php $terms = get_the_terms($post->ID, 'beforeaftercategory'); ?>
-      <h2><?php echo $terms[0]->name; ?></h2>
+			<?php $terms = get_the_terms( $post->ID, 'beforeaftercategory' ); ?>
+	  <h2><?php echo $terms[0]->name; ?></h2>
 			<div class="card__gallery card__gallery--horizontal">
 	  <?php
 		if ( have_posts() ) :
@@ -19,7 +19,6 @@ get_header();
 				the_post();
 								echo '<div class="card--display card--single">';
 								echo '<div class="image__area">';
-				echo '<div class="ba__holder mb-0"><div class="item">Before</div><div class="item">After</div></div>';
 								$images = get_field( 'gallery_images' );
 				if ( $images ) :
 					$counter = 0;

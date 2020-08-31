@@ -25,7 +25,7 @@
 					<?php if ( $phoneURL && $phone ) : ?>
 						<p><i class="fas fa-phone"></i> <?php echo $phone; ?></p>
 					<?php endif; ?>
-					<a href="tel:<?php echo $phoneURL; ?>" class="btn btn-primary">Call us</a>
+					<a href="tel:<?php echo $phoneURL; ?>" class="btn btn-primary">Call Aesthetics</a>
 					</div>
 				<div class="inner__padding">
 					<?php if ( $phoneURL_ent && $phone_ent ) : ?>

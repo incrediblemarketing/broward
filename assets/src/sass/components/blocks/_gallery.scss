@@ -139,8 +139,11 @@
         @include mq(md) {
             grid-template-columns: 1fr 1fr;
         }
-        @include mq(xl) {
+        @include mq(lg) {
             grid-template-columns: 1fr 1fr 1fr;
+        }
+        @include mq(xl) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
         }
         a {
             color: $secondary;
@@ -173,7 +176,7 @@
 
         .ba__holder {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             grid-gap: 5px;
             margin-bottom: 13px;
             font-style: italic;
@@ -311,6 +314,15 @@
 
                     @include mq(md) {
                         flex-direction: row;
+                    }
+
+                    .ba__holder {
+                        .item {
+                            img {
+                                max-height: 50vh;
+                                width: auto;
+                            }
+                        }
                     }
 
                     .description__area {

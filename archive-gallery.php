@@ -76,7 +76,7 @@ get_header();
 											echo '<div class="line"></div>';
 											echo '<i class="fa fa-long-arrow-right"></i>';
 										echo '</div>';
-										echo '<p>' . $counter / 2 . ' cases</p>';
+										echo '<p>' . $postcount . ' cases</p>';
 										echo '</a></div>';
 							}
 								echo '</div>';
