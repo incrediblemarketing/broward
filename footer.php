@@ -1,13 +1,16 @@
 <?php
-	$copyright    = get_field( 'copyright', 'option' );
-	$address      = get_field( 'business_street_address', 'option' );
-	$address2     = get_field( 'business_city_state_zip', 'option' );
-	$addressLink  = get_field( 'business_address_link', 'option' );
-	$phone        = get_field( 'business_phone_display', 'option' );
-	$phoneURL     = get_field( 'business_phone_url', 'option' );
-	$phone_ent    = get_field( 'business_phone_display_ent', 'option' );
-	$phoneURL_ent = get_field( 'business_phone_url_ent', 'option' );
-	$footerbg     = get_field( 'footer_background_image', 'option' );
+	$copyright     = get_field( 'copyright', 'option' );
+	$address       = get_field( 'business_street_address', 'option' );
+	$address2      = get_field( 'business_city_state_zip', 'option' );
+	$addressLink   = get_field( 'business_address_link', 'option' );
+	$address_2     = get_field( 'business_street_address', 'option' );
+	$address2_2    = get_field( 'business_city_state_zip', 'option' );
+	$addressLink_2 = get_field( 'business_address_link', 'option' );
+	$phone         = get_field( 'business_phone_display', 'option' );
+	$phoneURL      = get_field( 'business_phone_url', 'option' );
+	$phone_ent     = get_field( 'business_phone_display_ent', 'option' );
+	$phoneURL_ent  = get_field( 'business_phone_url_ent', 'option' );
+	$footerbg      = get_field( 'footer_background_image', 'option' );
 ?>
 
 	<footer id="footer" class="footer row justify-content-center " data-bg-image="<?php echo $footerbg; ?>">
@@ -18,6 +21,11 @@
 					<p><i class="fas fa-map-marker-alt"></i> <?php echo $address; ?><br/>
 						<?php echo $address2; ?></a></p>    
 					<a href="<?php echo $addressLink; ?>" target="_blank" class="btn btn-primary">Get directions</a>
+					<?php endif; ?>
+					<?php if ( $addressLink_2 && $address_2 && $address2_2 ) : ?>
+					<p class="mt-5"><i class="fas fa-map-marker-alt"></i> <?php echo $address_2; ?><br/>
+						<?php echo $address2_2; ?></a></p>    
+					<a href="<?php echo $addressLink_2; ?>" target="_blank" class="btn btn-primary">Get directions</a>
 					<?php endif; ?>
 				</div>
 				<hr/>

@@ -63,6 +63,8 @@
                     $('a[href="#"]').on("click", function(e) {
                         e.preventDefault();
                     });
+										
+										$('.menu-item-682 a, .menu-item-683 a').attr('target', '_blank');
 
                     $(".menu__mobile .menu li.menu-item-has-children > a").after('<i class="fal fa-angle-down"></i>');
 

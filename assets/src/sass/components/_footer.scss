@@ -49,8 +49,9 @@ footer {
         p {
             font-size: 1.05rem;
             line-height: 1.5em;
+            margin-bottom: 15px;
             @include mq(lg) {
-                font-size: 1.33rem;
+                font-size: 1.1rem;
             }
             i {
                 margin-left: -30px;
