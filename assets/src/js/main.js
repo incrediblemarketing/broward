@@ -184,15 +184,30 @@
 									});
                 },
                 swiperSetup: function() {
-                    var testimonial_home = new Swiper(".swiper--testimonials", {
-                        slidesPerView: "auto",
-                        centeredSlides: true,
-                        loop: true,
-                        pagination: {
-                            el: ".swiper-pagination",
-                            clickable: true
-                        }
-                    });
+										
+									if($('#block-5e4498b572322').length > 0){
+										var testimonial_home = new Swiper(".swiper--testimonials", {
+											slidesPerView: "auto",
+											centeredSlides: true,
+											loop: true,
+											pagination: {
+													el: ".swiper-pagination",
+													clickable: true
+											}
+										});
+									}else{
+											var singleGallerySwiper = new Swiper(".swiper-container", {
+													slidesPerView: 1,
+													centeredSlides: true,
+													loop: true,
+													autoHeight: true, //enable auto height
+													spaceBetween: 20,
+													navigation: {
+														nextEl: '.swiper-button-next',
+														prevEl: '.swiper-button-prev',
+													},
+											});
+									}
                 }
             }
         };
