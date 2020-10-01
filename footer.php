@@ -3,9 +3,9 @@
 	$address       = get_field( 'business_street_address', 'option' );
 	$address2      = get_field( 'business_city_state_zip', 'option' );
 	$addressLink   = get_field( 'business_address_link', 'option' );
-	$address_2     = get_field( 'business_street_address', 'option' );
-	$address2_2    = get_field( 'business_city_state_zip', 'option' );
-	$addressLink_2 = get_field( 'business_address_link', 'option' );
+	$address_2     = get_field( 'business_street_address_2', 'option' );
+	$address2_2    = get_field( 'business_city_state_zip_2', 'option' );
+	$addressLink_2 = get_field( 'business_address_link_2', 'option' );
 	$phone         = get_field( 'business_phone_display', 'option' );
 	$phoneURL      = get_field( 'business_phone_url', 'option' );
 	$phone_ent     = get_field( 'business_phone_display_ent', 'option' );
