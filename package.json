@@ -47,7 +47,7 @@
     "postcss": "^7.0.14",
     "sass-mq": "^5.0.0",
     "scrollmagic": "^2.0.6",
-    "swiper": "^4.4.6",
+    "swiper": "^6.5.1",
     "tiny-lr": "0.0.7"
   },
   "dependencies": {}
